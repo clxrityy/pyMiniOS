@@ -1,0 +1,10 @@
+# Command Reference
+
+| Command | Description | Arguments | Example |
+| ------- | ----------- | :---------: | :------- |
+| `ls` | List files and directories in the current directory. | `<directory>` | `ls utils/` |
+| `cd` | Change the current directory. | `<directory>` | `cd utils/` |
+| `cat` | Display the contents of a file. | `<file>` | `cat README.md` |
+| `echo` | Print text to the terminal. | `<text>` | `echo Hello, World!` |
+| `exit` | Exit the shell. | | `exit` |
+| `clear` | Clear the terminal screen. | | `clear` |

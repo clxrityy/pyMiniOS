@@ -1,0 +1,1 @@
+NO_ARGUMENTS_PROVIDED = "No arguments provided"

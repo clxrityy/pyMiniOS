@@ -23,11 +23,12 @@ A toy operating system simulation written in Python. `pyMiniOS` is **not** a rea
 git clone https://github.com/clxrityy/pyMiniOS.git # Clone the repository
 cd pyMiniOS # Navigate to the directory
 python3 main.py # Run the simulation
+```
 
-# With Python Virtual Environment
+#### Running in a Virtual Environment
+```bash
 python3 -m venv venv # Create a virtual environment
 source venv/bin/activate # Activate the virtual environment
 python3 main.py # Run the simulation
-# Deactivate the virtual environment
-deactivate
- ```
+deactivate # Deactivate the virtual environment
+```

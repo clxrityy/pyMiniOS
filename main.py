@@ -3,7 +3,7 @@ import shlex # Parses shell-like syntax into Python objects
 from utils.colors import color_text, Colors # Imports a custom Colors class for colored terminal output
 from utils.io import prompt, print_error, print_warning, print_success # Imports a custom prompt function for displaying the command line prompt
 from utils.fs import is_dir, list_dir, read_file # Imports custom functions for file and directory operations
-from commands import COMMANDS
+from commands import COMMANDS, handle_command
 
 class PyKernel: # Defines a class to represent the kernel
     def __init__(self): # Constructor to initialize the kernel
@@ -23,13 +23,7 @@ class PyKernel: # Defines a class to represent the kernel
                 break # Exits the loop
             
     def execute(self, cmd):
-        tokens = shlex.split(cmd)
-        command = tokens[0]
-        args = tokens[1:]
-        if command in COMMANDS:
-            COMMANDS[command](args, self)
-        else:
-            print_error(f"Command not found: {command}")
+        handle_command(cmd, shell=self) # Handles the command execution
                  
             
 

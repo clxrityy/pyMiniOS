@@ -8,6 +8,7 @@ from commands.mkdir import cmd_mkdir
 from commands.touch import cmd_touch
 from commands.rm import cmd_rm
 from commands.rmdir import cmd_rmdir
+from commands.help import cmd_help
 
 from utils.errors import error
 from utils.io import print_info
@@ -73,9 +74,15 @@ COMMANDS = {
         "usage": "rmdir <directory>",
         "example": "rmdir old_folder",
     },
+    "help": {
+        "func": cmd_help,
+        "description": "Display help information for commands",
+        "usage": "help [command]",
+        "example": "help",
+    },
 }
 
-def handle_command(input_line, shell):
+def handle_command(input_line, shell, commands):
     args = input_line.strip().split()
     if not args:
         return
@@ -86,7 +93,11 @@ def handle_command(input_line, shell):
     if cmd_name in COMMANDS:
         cmd_obj = COMMANDS[cmd_name]
         cmd_func = cmd_obj["func"]
-        cmd_func(cmd_args, shell)
+        if cmd_name == "help":
+            cmd_func(cmd_args, shell, commands)
+        else:
+            cmd_func(cmd_args, shell)
     else:
         error("Unknown command", cmd_name)
         print_info("Run 'help' to see the list of available commands.")
+        

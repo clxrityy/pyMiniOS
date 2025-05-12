@@ -1,0 +1,33 @@
+# Python cache and artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log and runtime files
+*.log
+*.pid
+/tmp_fs/
+*.tmp
+
+# Test output
+coverage/
+htmlcov/
+.cache/
+.pytest_cache/
+
+# Dependency files (optional if generated)
+Pipfile.lock
+poetry.lock

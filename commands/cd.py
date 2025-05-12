@@ -1,11 +1,12 @@
-from utils.fs import is_dir, list_dir
+import os
 from utils.io import print_info, print_error, print_success
 from misc.constants import NO_ARGUMENTS_PROVIDED
-import os
+from utils.errors import error
+
 
 def cmd_cd(args, shell):
     if not args:
-        print(format_error("cd", NO_ARGUMENTS_PROVIDED))
+        print(error("cd", NO_ARGUMENTS_PROVIDED))
         return
     try:
         new_path = os.path.abspath(os.path.join(shell.cwd, args[0]))

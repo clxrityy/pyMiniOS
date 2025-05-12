@@ -23,3 +23,9 @@ def print_success(message):
     Prints a success message in green color.
     """
     print(color_text(message, Colors.OKGREEN))  # Prints a success message in green color
+    
+def print_info(message):
+    """
+    Prints an info message in blue color.
+    """
+    print(color_text(message, Colors.OKBLUE))  # Prints an info message in blue color

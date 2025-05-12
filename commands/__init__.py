@@ -7,6 +7,7 @@ from commands.clear import cmd_clear
 from commands.mkdir import cmd_mkdir
 from commands.touch import cmd_touch
 from commands.rm import cmd_rm
+from commands.rmdir import cmd_rmdir
 
 COMMANDS = {
     "cd": cmd_cd,
@@ -18,4 +19,5 @@ COMMANDS = {
     "mkdir": cmd_mkdir,
     "touch": cmd_touch,
     "rm": cmd_rm,
+    "rmdir": cmd_rmdir,
 }

@@ -8,3 +8,4 @@
 | `echo` | Print text to the terminal. | `<text>` | `echo Hello, World!` |
 | `exit` | Exit the shell. | | `exit` |
 | `clear` | Clear the terminal screen. | | `clear` |
+| `mkdir` | Create a new directory. | `<directory>` | `mkdir new_folder` |

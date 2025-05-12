@@ -1,7 +1,8 @@
 import os # Provides OS-level file and directory operations
 import shlex # Parses shell-like syntax into Python objects
 from utils.colors import color_text, Colors # Imports a custom Colors class for colored terminal output
-
+from utils.io import prompt, print_error, print_warning, print_success # Imports a custom prompt function for displaying the command line prompt
+from utils.fs import is_dir, list_dir, read_file # Imports custom functions for file and directory operations
 
 class PyKernel: # Defines a class to represent the kernel
     """
@@ -15,13 +16,14 @@ class PyKernel: # Defines a class to represent the kernel
     def run(self): # REPL loop (Read-Eval-Print Loop)
         while self.running: # Continuously runs until the user exits
             try:
-                cmd = input(color_text(self.cwd, Colors.OKCYAN) + color_text(" > ", Colors.BOLD)) # Prompts the user for input and displays the current working directory
+                cmd = input(prompt(self.cwd)) # Displays the prompt and waits for user input
                 self.execute(cmd) # Executes the command
             except (KeyboardInterrupt, EOFError): # Handles Ctrl+C and EOF (Ctrl+D) gracefully
-                print(color_text("\nExiting...", Colors.WARNING)) # Prints a message when exiting
+                print_warning("\nExiting...") # Prints a warning message when exiting
                 break # Exits the loop
             except Exception as e: # Catches any other exceptions
-                print(color_text("ERROR: ", Colors.FAIL) + color_text(e, Colors.WARNING)) # Prints the error message
+                print_error(e) # Prints a generic error message
+                # print(color_text("ERROR: ", Colors.FAIL) + color_text(e, Colors.WARNING)) # Prints the error message
                 break # Exits the loop
 
     def execute(self, cmd): # Executes the command entered by the user
@@ -60,22 +62,17 @@ class PyKernel: # Defines a class to represent the kernel
 
     def ls(self, args): # List directory contents function
         try:
-            path = self.cwd if not args else args[0] # If no arguments, use current directory
-            for f in os.listdir(path): # Lists files in the directory
-                print(color_text(f, Colors.OKBLUE)) # Prints each file
+            path = self.cwd if not args else args[0]
+            list_dir(path)
         except Exception as e: # Catches any exceptions (like directory not found)
-            print(color_text(f"ls: {e}", Colors.FAIL)) # Prints the error message
-
+            print_error(f"ls: {e}") # Prints the error message
+        
     def cat(self, args): # Concatenate and display file contents function
         if not args: # Checks if no arguments are provided
             print(color_text("cat: ", Colors.OKCYAN), color_text("missing operand", Colors.WARNING)) # Prints an error message
             return
         for filename in args: # Iterates through each file provided
-            try:
-                with open(filename, "r") as f: # Attempts to open the file
-                    print(color_text(f, Colors.OKBLUE)) # Reads and prints the file contents
-            except Exception as e: # Catches any exceptions (like file not found)
-                print(color_text("cat: ", Colors.OKCYAN), color_text(e, Colors.FAIL))
+            read_file(filename) # Reads and prints the file contents
 
 if __name__ == "__main__": # Ensures the script runs only when executed directly
     PyKernel().run() # Create an instance of the PyKernel class and run it

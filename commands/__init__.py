@@ -5,6 +5,7 @@ from commands.exit import cmd_exit
 from commands.ls import cmd_ls
 from commands.clear import cmd_clear
 from commands.mkdir import cmd_mkdir
+from commands.touch import cmd_touch
 
 COMMANDS = {
     "cd": cmd_cd,
@@ -14,4 +15,5 @@ COMMANDS = {
     "exit": cmd_exit,
     "clear": cmd_clear,
     "mkdir": cmd_mkdir,
+    "touch": cmd_touch,
 }

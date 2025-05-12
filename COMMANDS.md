@@ -9,3 +9,4 @@
 | `exit` | Exit the shell. | | `exit` |
 | `clear` | Clear the terminal screen. | | `clear` |
 | `mkdir` | Create a new directory. | `<directory>` | `mkdir new_folder` |
+| `touch` | Create a new file or update the timestamp of an existing file. | `<file>` | `touch new_file.txt` |

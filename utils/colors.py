@@ -13,6 +13,8 @@ class Colors:
     ENDC = "\033[0m"
     BOLD = "\033[1m"
     UNDERLINE = "\033[4m"
+    MAGENTA = "\033[35m"
+    GREY = "\033[37m"
 
 def color_text(text, color):
     """

@@ -11,6 +11,7 @@ from commands.rmdir import cmd_rmdir
 from commands.help import cmd_help
 from commands.pwd import cmd_pwd
 from commands.cp import cmd_cp
+from commands.mv import cmd_mv
 
 from utils.errors import error
 from utils.io import print_info
@@ -87,6 +88,12 @@ COMMANDS = {
         "description": "Copy files and directories",
         "usage": "cp <source> <destination>",
         "example": "cp file.txt /home/user/new_file.txt",
+    },
+    "mv": {
+        "func": cmd_mv,
+        "description": "Move or rename files and directories",
+        "usage": "mv <source> <destination>",
+        "example": "mv file.txt /home/user/new_file.txt",  
     },
     "help": {
         "func": cmd_help,

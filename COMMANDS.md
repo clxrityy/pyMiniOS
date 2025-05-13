@@ -15,3 +15,4 @@
 | `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` |
 | `pwd` | Print the current working directory. | | `pwd` |
 | `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` |
+| `mv` | Move or rename files or directories. | `<source> <destination>` | `mv old_file.txt new_file.txt` |

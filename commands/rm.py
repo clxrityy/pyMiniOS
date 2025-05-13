@@ -21,6 +21,3 @@ def cmd_rm(args, shell):
             error("rm", f"cannot remove '{filename}': {e.strerror}.")
         except Exception as e:
             error("rm", f"cannot remove '{filename}': {str(e)}.")
-        else:
-            # If the file was removed successfully, print a success message
-            print_success(f"Removed '{filename}'")

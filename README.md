@@ -7,14 +7,28 @@ A toy operating system simulation written in Python. `pyMiniOS` is **not** a rea
 ## Features
 - Minimal shell
 - Command interpreter loop
+    - Basic command handling
 - Runs in terminal or command line
 - No external libraries required
+- Process management simulation
+    - Process creation and termination
+    - Process listing
+    - Process killing
 
 ## Planned Features
 - File system simulation
     - File permissions & access control
 - Shell history, command chaining, and piping
-- Process/task management
+- [x] Process/task management
+    - [x] Process creation and termination
+    - [ ] Process scheduling
+    - [ ] Inter-process communication
+    - [ ] Process synchronization
+- [ ] Memory management
+    - [ ] Virtual memory
+    - [ ] Paging and segmentation
+    - [ ] Memory allocation and deallocation
+    - [ ] Memory protection
 - Basic networking simulation
 
 ---

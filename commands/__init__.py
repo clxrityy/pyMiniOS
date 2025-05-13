@@ -10,6 +10,7 @@ from commands.rm import cmd_rm
 from commands.rmdir import cmd_rmdir
 from commands.help import cmd_help
 from commands.pwd import cmd_pwd
+from commands.cp import cmd_cp
 
 from utils.errors import error
 from utils.io import print_info
@@ -80,6 +81,12 @@ COMMANDS = {
         "description": "Print the current working directory",
         "usage": "pwd",
         "example": "pwd",     
+    },
+    "cp": {
+        "func": cmd_cp,
+        "description": "Copy files and directories",
+        "usage": "cp <source> <destination>",
+        "example": "cp file.txt /home/user/new_file.txt",
     },
     "help": {
         "func": cmd_help,

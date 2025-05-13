@@ -14,3 +14,4 @@
 | `rm` | Remove a file. | `<file>` | `rm old_file.txt` |
 | `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` |
 | `pwd` | Print the current working directory. | | `pwd` |
+| `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` |

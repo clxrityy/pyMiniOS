@@ -2,6 +2,7 @@
 
 | Command | Description | Arguments | Example |
 | ------- | ----------- | :---------: | :------- |
+| **`help`** | **Display help information for commands.** | **`<command>`** | **`help ls`** |
 | `ls` | List files and directories in the current directory. | `<directory>` | `ls utils/` |
 | `cd` | Change the current directory. | `<directory>` | `cd utils/` |
 | `cat` | Display the contents of a file. | `<file>` | `cat README.md` |

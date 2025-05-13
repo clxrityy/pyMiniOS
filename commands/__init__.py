@@ -9,6 +9,7 @@ from commands.touch import cmd_touch
 from commands.rm import cmd_rm
 from commands.rmdir import cmd_rmdir
 from commands.help import cmd_help
+from commands.pwd import cmd_pwd
 
 from utils.errors import error
 from utils.io import print_info
@@ -73,6 +74,12 @@ COMMANDS = {
         "description": "Remove a directory",
         "usage": "rmdir <directory>",
         "example": "rmdir old_folder",
+    },
+    "pwd": {
+        "func": cmd_pwd,
+        "description": "Print the current working directory",
+        "usage": "pwd",
+        "example": "pwd",     
     },
     "help": {
         "func": cmd_help,

@@ -13,3 +13,4 @@
 | `touch` | Create a new file or update the timestamp of an existing file. | `<file>` | `touch new_file.txt` |
 | `rm` | Remove a file. | `<file>` | `rm old_file.txt` |
 | `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` |
+| `pwd` | Print the current working directory. | | `pwd` |

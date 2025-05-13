@@ -2,7 +2,7 @@
 
 A toy operating system simulation written in Python. `pyMiniOS` is **not** a real kernel or OS — instead, it's a learning playground that mimics a shell environment with basic command handling, a virtual filesystem, and simulated OS behaviors.
 
-![Static Badge](https://img.shields.io/badge/commands-show?style=for-the-badge&logo=gnometerminal&logoColor=%23111111&color=%234B8BBE&link=https%3A%2F%2Fgithub.com%2Fclxrityy%2FpyMiniOS%2Fblob%2Fmaster%2FCOMMANDS.md)
+[![Static Badge](https://img.shields.io/badge/commands-show?style=for-the-badge&logo=gnometerminal&logoColor=%23111111&color=%234B8BBE&link=https%3A%2F%2Fgithub.com%2Fclxrityy%2FpyMiniOS%2Fblob%2Fmaster%2FCOMMANDS.md)](./COMMANDS.md)
 
 ## Features
 - Minimal shell

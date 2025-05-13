@@ -1,18 +1,22 @@
 # Command Reference
 
-| Command | Description | Arguments | Example |
-| ------- | ----------- | :---------: | :------- |
-| **`help`** | **Display help information for commands.** | **`<command>`** | **`help ls`** |
-| `ls` | List files and directories in the current directory. | `<directory>` | `ls utils/` |
-| `cd` | Change the current directory. | `<directory>` | `cd utils/` |
-| `cat` | Display the contents of a file. | `<file>` | `cat README.md` |
-| `echo` | Print text to the terminal. | `<text>` | `echo Hello, World!` |
-| `exit` | Exit the shell. | | `exit` |
-| `clear` | Clear the terminal screen. | | `clear` |
-| `mkdir` | Create a new directory. | `<directory>` | `mkdir new_folder` |
-| `touch` | Create a new file or update the timestamp of an existing file. | `<file>` | `touch new_file.txt` |
-| `rm` | Remove a file. | `<file>` | `rm old_file.txt` |
-| `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` |
-| `pwd` | Print the current working directory. | | `pwd` |
-| `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` |
-| `mv` | Move or rename files or directories. | `<source> <destination>` | `mv old_file.txt new_file.txt` |
+| Command | Description | Arguments | Example | Category |
+| ------- | ----------- | :---------: | :------- | :-------: |
+| **`help`** | **Display help information for commands.** | **`<command>`** | **`help ls`** | **General** |
+| `ls` | List files and directories in the current directory. | `<directory>` | `ls utils/` | General |
+| `cd` | Change the current directory. | `<directory>` | `cd utils/` | General |
+| `cat` | Display the contents of a file. | `<file>` | `cat README.md` | General |
+| `echo` | Print text to the terminal. | `<text>` | `echo Hello, World!` | General |
+| `exit` | Exit the shell. | | `exit` | General |
+| `clear` | Clear the terminal screen. | | `clear` | General |
+| `mkdir` | Create a new directory. | `<directory>` | `mkdir new_folder` | General |
+| `touch` | Create a new file or update the timestamp of an existing file. | `<file>` | `touch new_file.txt` | General |
+| `rm` | Remove a file. | `<file>` | `rm old_file.txt` | General |
+| `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` | General |
+| `pwd` | Print the current working directory. | | `pwd` | General |
+| `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` | General |
+| `mv` | Move or rename files or directories. | `<source> <destination>` | `mv old_file.txt new_file.txt` | General |
+| `run` | Start a new process. | `<process_name>` | `run dummy_task` | Process Management |
+| `ps` | List all running processes. | | `ps` | Process Management |
+| `kill` | Terminate a process. | `<pid>` | `kill 1234` | Process Management |
+| `uptime` | Display system uptime. | | `uptime` | System Information |

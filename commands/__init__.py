@@ -12,11 +12,17 @@ from commands.help import cmd_help
 from commands.pwd import cmd_pwd
 from commands.cp import cmd_cp
 from commands.mv import cmd_mv
+from commands.process.kill import cmd_kill
+from commands.process.run import cmd_run
+from commands.process.ps import cmd_ps
+from commands.system.uptime import cmd_uptime
+
 
 from utils.errors import error
 from utils.io import print_info
 
 COMMANDS = {
+    # GENERAL COMMANDS
     "cd": {
         "func": cmd_cd,
         "description": "Change the current directory",
@@ -101,6 +107,33 @@ COMMANDS = {
         "usage": "help [command]",
         "example": "help",
     },
+    # PROCESS COMMANDS
+    "run": {
+        "func": cmd_run,
+        "description": "Run a process",
+        "usage": "run <command>",
+        "example": "run dummy_task",
+    },
+    "ps": {
+        "func": cmd_ps,
+        "description": "List running processes",
+        "usage": "ps",
+        "example": "ps",
+    },
+    "kill": {
+        "func": cmd_kill,
+        "description": "Terminate a process",
+        "usage": "kill <pid>",
+        "example": "kill 1234",
+    },
+    # SYSTEM COMMANDS
+    "uptime": {
+        "func": cmd_uptime,
+        "description": "Display system uptime",
+        "usage": "uptime",
+        "example": "uptime",
+    },
+    
 }
 
 def handle_command(input_line, shell, commands):

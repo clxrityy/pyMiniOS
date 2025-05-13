@@ -4,11 +4,15 @@ from utils.colors import color_text, Colors # Imports a custom Colors class for 
 from utils.io import prompt, print_error, print_grey # Imports a custom prompt function for displaying the command line prompt
 from utils.fs import list_dir, read_file # Imports custom functions for file and directory operations
 from commands import COMMANDS, handle_command
+from core.process_manager import ProcessManager # Imports a custom ProcessManager class for managing processes
 
 class PyKernel: # Defines a class to represent the kernel
     def __init__(self): # Constructor to initialize the kernel
         self.running = True # Controls the shell/main loop
         self.cwd = os.getcwd() # Stores the current working directory (starts in the directory where the script is run)
+        
+        self.process_manager = ProcessManager() # Initializes the process manager
+        self.process_manager.reset() # Resets the process manager to its initial state
 
     def run(self): # REPL loop (Read-Eval-Print Loop)
         while self.running: # Continuously runs until the user exits

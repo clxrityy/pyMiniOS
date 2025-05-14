@@ -20,6 +20,7 @@ from commands.system.cpu import cmd_cpu
 from commands.system.mem import cmd_mem
 from commands.system.df import cmd_df
 from commands.system.top import cmd_top
+from commands.audio.info import cmd_audio_info
 
 
 
@@ -162,6 +163,18 @@ COMMANDS = {
         "usage": "top",
         "example": "top",
     },
+    
+    # AUDIO COMMANDS
+    "audio": {
+        "subcommands": {
+            "info": {
+                "func": cmd_audio_info,
+                "description": "Display metadata for an audio file",
+                "usage": "audio info <audio>",
+                "example": "audio info https://audio.com/example.wav"
+            }
+        }
+    }
 }
 
 def handle_command(input_line, shell, commands):
@@ -170,11 +183,18 @@ def handle_command(input_line, shell, commands):
         return
     
     cmd_name = args[0]
-    cmd_args = args[1:]
+    subcommand = args[1] if len(args) > 1 else None
+    cmd_args = args[2:] if len(args) > 2 else []
+    
     
     if cmd_name in COMMANDS:
         cmd_obj = COMMANDS[cmd_name]
-        cmd_func = cmd_obj["func"]
+        
+        if "subcommands" in cmd_obj:
+            if subcommand in cmd_obj["subcommands"]:
+                cmd_func = cmd_obj["subcommands"][subcommand]["func"]
+            else:
+                cmd_func = cmd_obj["func"]
         if cmd_name == "help":
             cmd_func(cmd_args, shell, commands)
         else:

@@ -16,6 +16,9 @@ from commands.process.kill import cmd_kill
 from commands.process.run import cmd_run
 from commands.process.ps import cmd_ps
 from commands.system.uptime import cmd_uptime
+from commands.system.cpu import cmd_cpu
+from commands.system.mem import cmd_mem
+
 
 
 from utils.errors import error
@@ -132,6 +135,18 @@ COMMANDS = {
         "description": "Display system uptime",
         "usage": "uptime",
         "example": "uptime",
+    },
+    "cpu": {
+        "func": cmd_cpu,
+        "description": "Display CPU usage",
+        "usage": "cpu",
+        "example": "cpu",
+    },
+    "mem": {
+        "func": cmd_mem,
+        "description": "Display memory usage",
+        "usage": "mem",
+        "example": "mem",
     },
     
 }

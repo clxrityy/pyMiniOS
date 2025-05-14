@@ -1,4 +1,10 @@
-# Command Reference
+# Command reference
+
+- [General commands](#general-commands)
+- [Process management commands](#process-management-commands)
+- [System commands](#system-commands)
+
+## General commands
 
 | Command | Description | Arguments | Example | Category |
 | ------- | ----------- | :---------: | :------- | :-------: |
@@ -16,7 +22,20 @@
 | `pwd` | Print the current working directory. | | `pwd` | General |
 | `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` | General |
 | `mv` | Move or rename files or directories. | `<source> <destination>` | `mv old_file.txt new_file.txt` | General |
+
+
+## Process management commands
+
+| Command | Description | Arguments | Example | Category |
+| ------- | ----------- | :---------: | :------- | :-------: |
 | `run` | Start a new process. | `<process_name>` | `run dummy_task` | Process Management |
 | `ps` | List all running processes. | | `ps` | Process Management |
 | `kill` | Terminate a process. | `<pid>` | `kill 1234` | Process Management |
+
+## System commands
+
+| Command | Description | Arguments | Example | Category |
+| ------- | ----------- | :---------: | :------- | :-------: |
 | `uptime` | Display system uptime. | | `uptime` | System Information |
+| `mem` | Display memory usage. | | `mem` | System Information |
+| `cpu` | Display CPU usage. | | `cpu` | System Information |

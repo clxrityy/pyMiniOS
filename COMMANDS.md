@@ -48,3 +48,4 @@
 | Command | Description | Arguments | Example | Category |
 | ------- | ----------- | :---------: | :------- | :-------: |
 | `audio info` | Display audio information. | <audio_file> | `audio info https://github.com/rafaelreis-hotmart/Audio-Sample-files/raw/master/sample.wav` | Audio |
+| `audio convert` | Convert audio files to different formats. | `<input_file> <output_file>` | `audio convert input.wav output.mp3` | Audio |

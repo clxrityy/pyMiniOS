@@ -3,6 +3,7 @@
 - [General commands](#general-commands)
 - [Process management commands](#process-management-commands)
 - [System commands](#system-commands)
+- [Audio commands](#audio-commands)
 
 ## General commands
 
@@ -41,3 +42,9 @@
 | `cpu` | Display CPU usage. | | `cpu` | System Information |
 | `df` | Display disk space usage. | | `df` | System Information |
 | `top` | Display system processes and resource usage (realtime). | | `top` | System Information |
+
+## Audio commands
+
+| Command | Description | Arguments | Example | Category |
+| ------- | ----------- | :---------: | :------- | :-------: |
+| `audio info` | Display audio information. | <audio_file> | `audio info https://github.com/rafaelreis-hotmart/Audio-Sample-files/raw/master/sample.wav` | Audio |

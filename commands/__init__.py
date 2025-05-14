@@ -19,6 +19,7 @@ from commands.system.uptime import cmd_uptime
 from commands.system.cpu import cmd_cpu
 from commands.system.mem import cmd_mem
 from commands.system.df import cmd_df
+from commands.system.top import cmd_top
 
 
 
@@ -154,6 +155,12 @@ COMMANDS = {
         "description": "Display disk usage",
         "usage": "df [directory]",
         "example": "df /home/user",
+    },
+    "top": {
+        "func": cmd_top,
+        "description": "Display system resource usage",
+        "usage": "top",
+        "example": "top",
     },
 }
 

@@ -40,3 +40,4 @@
 | `mem` | Display memory usage. | | `mem` | System Information |
 | `cpu` | Display CPU usage. | | `cpu` | System Information |
 | `df` | Display disk space usage. | | `df` | System Information |
+| `top` | Display system processes and resource usage (realtime). | | `top` | System Information |

@@ -39,3 +39,4 @@
 | `uptime` | Display system uptime. | | `uptime` | System Information |
 | `mem` | Display memory usage. | | `mem` | System Information |
 | `cpu` | Display CPU usage. | | `cpu` | System Information |
+| `df` | Display disk space usage. | | `df` | System Information |

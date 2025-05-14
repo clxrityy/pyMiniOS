@@ -18,6 +18,7 @@ from commands.process.ps import cmd_ps
 from commands.system.uptime import cmd_uptime
 from commands.system.cpu import cmd_cpu
 from commands.system.mem import cmd_mem
+from commands.system.df import cmd_df
 
 
 
@@ -148,7 +149,12 @@ COMMANDS = {
         "usage": "mem",
         "example": "mem",
     },
-    
+    "df": {
+        "func": cmd_df,
+        "description": "Display disk usage",
+        "usage": "df [directory]",
+        "example": "df /home/user",
+    },
 }
 
 def handle_command(input_line, shell, commands):

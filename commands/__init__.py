@@ -194,7 +194,11 @@ def handle_command(input_line, shell, commands):
             if subcommand in cmd_obj["subcommands"]:
                 cmd_func = cmd_obj["subcommands"][subcommand]["func"]
             else:
-                cmd_func = cmd_obj["func"]
+                error("Unknown subcommand", subcommand)
+                print_info(f"Run 'help {cmd_name}' to see the list of available subcommands.")
+                return
+        else:
+            cmd_func = cmd_obj["func"]
         if cmd_name == "help":
             cmd_func(cmd_args, shell, commands)
         else:

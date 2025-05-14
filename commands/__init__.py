@@ -21,7 +21,7 @@ from commands.system.mem import cmd_mem
 from commands.system.df import cmd_df
 from commands.system.top import cmd_top
 from commands.audio.info import cmd_audio_info
-
+from commands.audio.convert import cmd_audio_convert
 
 
 from utils.errors import error
@@ -172,6 +172,12 @@ COMMANDS = {
                 "description": "Display metadata for an audio file",
                 "usage": "audio info <audio>",
                 "example": "audio info https://audio.com/example.wav"
+            },
+            "convert": {
+                "func": cmd_audio_convert,
+                "description": "Convert an audio file to a different format",
+                "usage": "audio convert <input_file> <output_file>",
+                "example": "audio convert input.wav output.mp3"
             }
         }
     }
@@ -184,7 +190,7 @@ def handle_command(input_line, shell, commands):
     
     cmd_name = args[0]
     subcommand = args[1] if len(args) > 1 else None
-    cmd_args = args[2:] if len(args) > 2 else []
+    cmd_args = args[2:] if len(args) > 2 else args[1:]
     
     
     if cmd_name in COMMANDS:

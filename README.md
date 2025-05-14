@@ -18,6 +18,7 @@ A minimal Python-based pseudo-operating system with a command-line shell. Simula
     - Uptime
     - Memory usage
     - CPU usage
+- Audio interaction commands
 
 ## Planned Features
 - File system simulation
@@ -36,7 +37,7 @@ A minimal Python-based pseudo-operating system with a command-line shell. Simula
 - [ ] System management
     - [ ] System calls
     - [x] View system information
-    - [ ] System monitoring
+    - [x] System monitoring
     - [ ] System logging
 - Basic networking simulation
 

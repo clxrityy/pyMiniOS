@@ -61,3 +61,4 @@
 | ------- | ----------- | :---------: | :------- | :-------: |
 | `net test` | Test your network diagnostics. | | `net test` | Network |
 | `net speed` | Test your internet speed. | | `net speed` | Network |
+| `net dns` | Display DNS information. | | `net dns` | Network |

@@ -1,28 +1,34 @@
 # Command reference
 
 - [General commands](#general-commands)
+- [File management commands](#file-management-commands)
 - [Process management commands](#process-management-commands)
 - [System commands](#system-commands)
 - [Audio commands](#audio-commands)
+- [Network commands](#network-commands)
 
 ## General commands
 
 | Command | Description | Arguments | Example | Category |
 | ------- | ----------- | :---------: | :------- | :-------: |
 | **`help`** | **Display help information for commands.** | **`<command>`** | **`help ls`** | **General** |
-| `ls` | List files and directories in the current directory. | `<directory>` | `ls utils/` | General |
-| `cd` | Change the current directory. | `<directory>` | `cd utils/` | General |
-| `cat` | Display the contents of a file. | `<file>` | `cat README.md` | General |
 | `echo` | Print text to the terminal. | `<text>` | `echo Hello, World!` | General |
 | `exit` | Exit the shell. | | `exit` | General |
 | `clear` | Clear the terminal screen. | | `clear` | General |
-| `mkdir` | Create a new directory. | `<directory>` | `mkdir new_folder` | General |
-| `touch` | Create a new file or update the timestamp of an existing file. | `<file>` | `touch new_file.txt` | General |
-| `rm` | Remove a file. | `<file>` | `rm old_file.txt` | General |
-| `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` | General |
-| `pwd` | Print the current working directory. | | `pwd` | General |
-| `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` | General |
-| `mv` | Move or rename files or directories. | `<source> <destination>` | `mv old_file.txt new_file.txt` | General |
+
+
+## File management commands
+| Command | Description | Arguments | Example | Category |
+| ------- | ----------- | :---------: | :------- | :-------: |
+| `pwd` | Print the current working directory. | | `pwd` | File Management |
+| `ls` | List files and directories in the current directory. | `<directory>` | `ls utils/`  | File Management |
+| `cat` | Display the contents of a file. | `<file>` | `cat README.md` | File Management |
+| `touch` | Create a new file or update the timestamp of an existing file. | `<file>` | `touch new_file.txt` | File Management |
+| `rm` | Remove a file. | `<file>` | `rm old_file.txt` | File Management |
+| `rmdir` | Remove an empty directory. | `<directory>` | `rmdir old_folder` | File Management |
+| `cp` | Copy files or directories. | `<source> <destination>` | `cp file.txt backup/` | File Management |
+| `mv` | Move or rename files or directories. | `<source> <destination>` | `mv old_file.txt new_file.txt` | File Management |
+| `mkdir` | Create a new directory. | `<directory>` | `mkdir new_folder` | File Management |
 
 
 ## Process management commands
@@ -49,3 +55,9 @@
 | ------- | ----------- | :---------: | :------- | :-------: |
 | `audio info` | Display audio information. | <audio_file> | `audio info https://github.com/rafaelreis-hotmart/Audio-Sample-files/raw/master/sample.wav` | Audio |
 | `audio convert` | Convert audio files to different formats. | `<input_file> <output_file>` | `audio convert input.wav output.mp3` | Audio |
+
+## Network commands
+| Command | Description | Arguments | Example | Category |
+| ------- | ----------- | :---------: | :------- | :-------: |
+| `net test` | Test your network diagnostics. | | `net test` | Network |
+| `net speed` | Test your internet speed. | | `net speed` | Network |

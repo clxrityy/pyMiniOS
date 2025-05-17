@@ -81,3 +81,23 @@ def list_open_ports():
         return run_cmd("netstat -ano | findstr LISTENING")
     else:
         return "Unsupported OS"
+    
+def list_lan_devices():
+    """
+    List devices on the local network
+    """
+    loader = LoaderBar("Scanning local network for devices...", delay=0.1)
+    loader.start()
+
+    try:
+        output = subprocess.check_output(
+            ["arp", "-a"],
+            stderr=subprocess.STDOUT,
+            text=True
+        )
+    except subprocess.CalledProcessError as e:
+        output = f"Error running arp:\n{e.output}"
+    finally:
+        loader.stop()
+
+    return output

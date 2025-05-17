@@ -10,6 +10,7 @@ A minimal Python-based pseudo-operating system with a command-line shell. Simula
 ```bash
 git clone https://github.com/clxrityy/pyMiniOS.git # Clone the repository
 cd pyMiniOS # Navigate to the directory
+pip install -r requirements.txt # Install dependencies
 python3 main.py # Run the simulation
 ```
 
@@ -24,6 +25,7 @@ deactivate # Deactivate the virtual environment
 ---
 
 ## Installation
+> Installs the required dependencies and sets up the environment for running the interface globally.
 
 ```bash
 chmod +x install.sh # Make the script executable
@@ -49,6 +51,7 @@ pymini # Run the simulation
     - Memory usage
     - CPU usage
 - Audio interaction commands
+- Network/WiFi commands
 
 ## Planned Features
 - Shell history, command chaining, and piping

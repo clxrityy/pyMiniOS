@@ -1,17 +1,17 @@
-from commands.cat import cmd_cat
-from commands.cd import cmd_cd
-from commands.echo import cmd_echo
-from commands.exit import cmd_exit
-from commands.ls import cmd_ls
-from commands.clear import cmd_clear
-from commands.mkdir import cmd_mkdir
-from commands.touch import cmd_touch
-from commands.rm import cmd_rm
-from commands.rmdir import cmd_rmdir
-from commands.help import cmd_help
-from commands.pwd import cmd_pwd
-from commands.cp import cmd_cp
-from commands.mv import cmd_mv
+from commands.file.cat import cmd_cat
+from commands.file.cd import cmd_cd
+from commands.general.echo import cmd_echo
+from commands.general.exit import cmd_exit
+from commands.file.ls import cmd_ls
+from commands.general.clear import cmd_clear
+from commands.file.mkdir import cmd_mkdir
+from commands.file.touch import cmd_touch
+from commands.file.rm import cmd_rm
+from commands.file.rmdir import cmd_rmdir
+from commands.general.help import cmd_help
+from commands.file.pwd import cmd_pwd
+from commands.file.cp import cmd_cp
+from commands.file.mv import cmd_mv
 from commands.process.kill import cmd_kill
 from commands.process.run import cmd_run
 from commands.process.ps import cmd_ps
@@ -22,6 +22,8 @@ from commands.system.df import cmd_df
 from commands.system.top import cmd_top
 from commands.audio.info import cmd_audio_info
 from commands.audio.convert import cmd_audio_convert
+from commands.network.test import cmd_test
+from commands.network.speed import cmd_speed
 
 
 from utils.errors import error
@@ -179,6 +181,24 @@ COMMANDS = {
                 "usage": "audio convert <input_file> <output_file>",
                 "example": "audio convert input.wav output.mp3"
             }
+        }
+    },
+    
+    # NETWORK COMMANDS
+    "net": {
+        "subcommands": {
+            "test": {
+                "func": cmd_test,
+                "description": "Test network connectivity",
+                "usage": "net test",
+                "example": "net test"
+            },
+            "speed": {
+                "func": cmd_speed,
+                "description": "Run a speed test",
+                "usage": "net speed",
+                "example": "net speed"
+            },
         }
     }
 }

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os # Provides OS-level file and directory operations
 import shlex # Parses shell-like syntax into Python objects
 from utils.colors import color_text, Colors # Imports a custom Colors class for colored terminal output

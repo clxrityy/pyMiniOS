@@ -32,7 +32,7 @@ EOF
 chmod +x "$BIN_PATH"
 
 # Ensure ~/.local/bin is in PATH
-SHELL_RC="$HOME/.bashrc"
+SHELL_RC="$HOME/.zshrc"
 [ -n "$ZSH_VERSION" ] && SHELL_RC="$HOME/.zshrc"
 
 if ! echo "$PATH" | grep -q "$HOME/.local/bin"; then

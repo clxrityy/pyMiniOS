@@ -4,7 +4,7 @@ def prompt(cwd):
     """
     Returns a formatted prompt string with the current working directory.
     """
-    return color_text("pyMiniOS ", Colors.BOLD) + color_text(cwd, Colors.OKCYAN) + color_text(" > ", Colors.BOLD)  # Returns a formatted prompt string
+    return color_text("pyMiniOS ", Colors.BOLD) + color_text(cwd, Colors.INFO) + color_text(" > ", Colors.BOLD)  # Returns a formatted prompt string
 
 def print_error(message):
     """

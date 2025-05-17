@@ -63,3 +63,5 @@
 | `net speed` | Test your internet speed. | | `net speed` | Network |
 | `net dns` | Display DNS information. | | `net dns` | Network |
 | `net ping` | Ping a host to check connectivity. | `<host> [count]` | `net ping 1.1.1.1 4` | Network | 
+| `net trace` | Trace the route to a host. | `<host>` | `net trace google.com` | Network |
+| `net ports` | Display open ports. | | `net ports` | Network |

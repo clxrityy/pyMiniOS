@@ -26,6 +26,8 @@ from commands.network.test import cmd_test
 from commands.network.speed import cmd_speed
 from commands.network.dns import cmd_dns
 from commands.network.ping import cmd_ping
+from commands.network.trace import cmd_trace
+from commands.network.ports import cmd_ports
 
 from utils.errors import error
 from utils.io import print_info
@@ -216,6 +218,18 @@ COMMANDS = {
                 "description": "Ping a host",
                 "usage": "net ping <host> [count]",
                 "example": "net ping 1.1.1.1 4"
+            },
+            "trace": {
+                "func": cmd_trace,
+                "description": "Trace the route to a host",
+                "usage": "net trace <host>",
+                "example": "net trace google.com"
+            },
+            "ports": {
+                "func": cmd_ports,
+                "description": "List open ports",
+                "usage": "net ports",
+                "example": "net ports"
             }
         }
     }

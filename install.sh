@@ -6,6 +6,14 @@ SOURCE_DIR="$(pwd)"
 INSTALL_DIR="$HOME/.local/share/$SCRIPT_NAME"
 BIN_PATH="$HOME/.local/bin/$SCRIPT_NAME"
 
+# Install dependencies
+echo "[INFO] Installing dependencies..."
+## Install Python 3 and pip if not already installed
+curl -sS https://bootstrap.pypa.io/get-pip.py | python3
+pip install --upgrade pip
+## Install required packages
+pip install -r requirements.txt
+
 # Make sure target dirs exist
 mkdir -p "$INSTALL_DIR"
 mkdir -p "$(dirname "$BIN_PATH")"

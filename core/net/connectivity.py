@@ -25,10 +25,10 @@ def get_public_ip():
         return f"Error: {e}"
     
 # Run a ping test to a specified host and return the result
-def ping_host(host, cout=4):
+def ping_host(host, count=4):
     os_type = get_os()
     
-    cmd = f"ping -{'c' if os_type != 'windows' else 'n'} {cout} {host}"
+    cmd = f"ping -{'c' if os_type != 'windows' else 'n'} {count} {host}"
     return run_cmd(cmd)
 
 # Resolve a domain name to its IP using dig

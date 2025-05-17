@@ -31,24 +31,13 @@ from utils.errors import error
 from utils.io import print_info
 
 COMMANDS = {
+    
     # GENERAL COMMANDS
-    "cd": {
-        "func": cmd_cd,
-        "description": "Change the current directory",
-        "usage": "cd <directory>",
-        "example": "cd /home/user",
-    },
-    "ls": {
-        "func": cmd_ls,
-        "description": "List directory contents",
-        "usage": "ls [directory]",
-        "example": "ls /home/user",
-    },
-    "cat": {
-        "func": cmd_cat,
-        "description": "Concatenate and display file content",
-        "usage": "cat <file>",
-        "example": "cat file.txt",  
+    "help": {
+        "func": cmd_help,
+        "description": "Display help information for commands",
+        "usage": "help [command]",
+        "example": "help",
     },
     "echo": {
         "func": cmd_echo,
@@ -67,6 +56,26 @@ COMMANDS = {
         "description": "Clear the terminal screen",
         "usage": "clear",
         "example": "clear",
+    },
+    
+    # FILE COMMANDS
+    "cd": {
+        "func": cmd_cd,
+        "description": "Change the current directory",
+        "usage": "cd <directory>",
+        "example": "cd /home/user",
+    },
+    "ls": {
+        "func": cmd_ls,
+        "description": "List directory contents",
+        "usage": "ls [directory]",
+        "example": "ls /home/user",
+    },
+    "cat": {
+        "func": cmd_cat,
+        "description": "Concatenate and display file content",
+        "usage": "cat <file>",
+        "example": "cat file.txt",  
     },
     "mkdir": {
         "func": cmd_mkdir,
@@ -110,12 +119,8 @@ COMMANDS = {
         "usage": "mv <source> <destination>",
         "example": "mv file.txt /home/user/new_file.txt",  
     },
-    "help": {
-        "func": cmd_help,
-        "description": "Display help information for commands",
-        "usage": "help [command]",
-        "example": "help",
-    },
+    
+    
     # PROCESS COMMANDS
     "run": {
         "func": cmd_run,

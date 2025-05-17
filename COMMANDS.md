@@ -4,8 +4,8 @@
 - [File management commands](#file-management-commands)
 - [Process management commands](#process-management-commands)
 - [System commands](#system-commands)
-- [Audio commands](#audio-commands)
-- [Network commands](#network-commands)
+- [Audio commands](#audio-commands) (`audio`)
+- [Network commands](#network-commands) (`net`)
 
 ## General commands
 

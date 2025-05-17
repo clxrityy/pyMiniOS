@@ -25,7 +25,7 @@ from commands.audio.convert import cmd_audio_convert
 from commands.network.test import cmd_test
 from commands.network.speed import cmd_speed
 from commands.network.dns import cmd_dns
-
+from commands.network.ping import cmd_ping
 
 from utils.errors import error
 from utils.io import print_info
@@ -205,6 +205,12 @@ COMMANDS = {
                 "description": "Display DNS server information",
                 "usage": "net dns",
                 "example": "net dns"
+            },
+            "ping": {
+                "func": cmd_ping,
+                "description": "Ping a host",
+                "usage": "net ping <host> [count]",
+                "example": "net ping 1.1.1.1 4"
             }
         }
     }

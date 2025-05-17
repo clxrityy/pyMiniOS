@@ -62,3 +62,4 @@
 | `net test` | Test your network diagnostics. | | `net test` | Network |
 | `net speed` | Test your internet speed. | | `net speed` | Network |
 | `net dns` | Display DNS information. | | `net dns` | Network |
+| `net ping` | Ping a host to check connectivity. | `<host> [count]` | `net ping 1.1.1.1 4` | Network | 

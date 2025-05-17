@@ -4,43 +4,6 @@ A minimal Python-based pseudo-operating system with a command-line shell. Simula
 
 [![Static Badge](https://img.shields.io/badge/commands-show?style=for-the-badge&logo=gnometerminal&logoColor=%23111111&color=%234B8BBE&link=https%3A%2F%2Fgithub.com%2Fclxrityy%2FpyMiniOS%2Fblob%2Fmaster%2FCOMMANDS.md)](./COMMANDS.md)
 
-## Features
-- Minimal shell
-- Command interpreter loop
-    - Basic command handling
-- Runs in terminal or command line
-- No external libraries required
-- Process management *simulation*
-    - Process creation and termination
-    - Process listing
-    - Process killing
-- System information
-    - Uptime
-    - Memory usage
-    - CPU usage
-- Audio interaction commands
-
-## Planned Features
-- File system simulation
-    - File permissions & access control
-- Shell history, command chaining, and piping
-- [x] Process/task management
-    - [x] Process creation and termination
-    - [ ] Process scheduling
-    - [ ] Inter-process communication
-    - [ ] Process synchronization
-- [ ] Memory management
-    - [ ] Virtual memory
-    - [ ] Paging and segmentation
-    - [ ] Memory allocation and deallocation
-    - [ ] Memory protection
-- [ ] System management
-    - [ ] System calls
-    - [x] View system information
-    - [x] System monitoring
-    - [ ] System logging
-- Basic networking simulation
-
 ---
 
 ## Usage
@@ -58,6 +21,57 @@ python3 main.py # Run the simulation
 deactivate # Deactivate the virtual environment
 ```
 
-![pyMiniOS](https://i.gyazo.com/0f132b867f785a87ec64c5ba9ce1dd3d.png)
+---
 
-----
+## Installation
+
+```bash
+chmod +x install.sh # Make the script executable
+./install.sh # Run the installation script
+
+pymini # Run the simulation
+```
+
+---
+
+## Features
+- Minimal shell
+- Command interpreter loop
+    - Basic command handling
+- Runs in terminal or command line
+- No external libraries required
+- Process management *simulation*
+    - Process creation and termination
+    - Process listing
+    - Process killing
+- System information
+    - Uptime
+    - Memory usage
+    - CPU usage
+- Audio interaction commands
+
+## Planned Features
+- Shell history, command chaining, and piping
+- [x] Process/task management
+    - [x] Process creation and termination
+    - [ ] Process scheduling
+    - [ ] Inter-process communication
+    - [ ] Process synchronization
+- [ ] Memory management
+    - [ ] Virtual memory
+    - [ ] Paging and segmentation
+    - [ ] Memory allocation and deallocation
+    - [ ] Memory protection
+- [ ] System management
+    - [ ] System calls
+    - [x] View system information
+    - [x] System monitoring
+    - [ ] System logging
+- [ ] Basic networking
+    - [ ] Socket programming
+    - [ ] Network protocols
+    - [ ] Network security
+- [ ] Web scraping
+    - [ ] Basic web scraping
+    - [ ] Data extraction and parsing
+    - [ ] Data storage and retrieval

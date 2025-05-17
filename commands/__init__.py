@@ -28,6 +28,8 @@ from commands.network.dns import cmd_dns
 from commands.network.ping import cmd_ping
 from commands.network.trace import cmd_trace
 from commands.network.ports import cmd_ports
+from commands.network.devices import cmd_devices
+
 
 from utils.errors import error
 from utils.io import print_info
@@ -230,6 +232,12 @@ COMMANDS = {
                 "description": "List open ports",
                 "usage": "net ports",
                 "example": "net ports"
+            },
+            "devices": {
+                "func": cmd_devices,
+                "description": "List devices on the local network",
+                "usage": "net devices",
+                "example": "net devices"
             }
         }
     }

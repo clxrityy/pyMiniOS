@@ -1,7 +1,7 @@
 import platform
 import subprocess
 import re
-from core.wifi.diagnostics.connectivity import run_cmd, get_os
+from core.net.utils import run_cmd, get_os
 from utils.io import print_heading, print_info, print_magenta
 
 # Get Wi-Fi signal strength, noise, and channel information

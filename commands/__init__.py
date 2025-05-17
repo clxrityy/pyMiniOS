@@ -24,6 +24,7 @@ from commands.audio.info import cmd_audio_info
 from commands.audio.convert import cmd_audio_convert
 from commands.network.test import cmd_test
 from commands.network.speed import cmd_speed
+from commands.network.dns import cmd_dns
 
 
 from utils.errors import error
@@ -199,6 +200,12 @@ COMMANDS = {
                 "usage": "net speed",
                 "example": "net speed"
             },
+            "dns": {
+                "func": cmd_dns,
+                "description": "Display DNS server information",
+                "usage": "net dns",
+                "example": "net dns"
+            }
         }
     }
 }

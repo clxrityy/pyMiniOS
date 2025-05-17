@@ -15,6 +15,7 @@ class Colors:
     UNDERLINE = "\033[4m"
     MAGENTA = "\033[95m"
     GREY = "\033[37m"
+    FAINT = "\033[2m"
 
 def color_text(text, color):
     """

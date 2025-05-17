@@ -1,8 +1,10 @@
 # pyMiniOS
 
-A minimal Python-based pseudo-operating system with a command-line shell. Simulates core OS behaviors like file management, process handling, environment variables, and user-defined commands — all without external dependencies.
+A minimalistic operating system simulation written in Python. It provides a basic command-line interface for simulating process management, system information retrieval, networking, and audio interaction. The project is designed to be lightweight and easy to use, making it suitable for educational purposes and as a starting point for more complex operating system simulations.
 
-[![Static Badge](https://img.shields.io/badge/commands-show?style=for-the-badge&logo=gnometerminal&logoColor=%23111111&color=%234B8BBE&link=https%3A%2F%2Fgithub.com%2Fclxrityy%2FpyMiniOS%2Fblob%2Fmaster%2FCOMMANDS.md)](./COMMANDS.md)
+###### [![View all commands](https://img.shields.io/badge/commands-show?style=for-the-badge&logo=gnometerminal&logoColor=%23111111&color=%234B8BBE&link=https%3A%2F%2Fgithub.com%2Fclxrityy%2FpyMiniOS%2Fblob%2Fmaster%2FCOMMANDS.md)](./COMMANDS.md)
+
+[![Example](https://i.gyazo.com/90bb9cc6e7e885a60527757948932349.gif)](https://gyazo.com/90bb9cc6e7e885a60527757948932349)
 
 ---
 
@@ -51,7 +53,13 @@ pymini # Run the simulation
     - Memory usage
     - CPU usage
 - Audio interaction commands
+    - Convert audio file to a different format
+    - Audio file metadata extraction
 - Network/WiFi commands
+    - Ports, trace, ping, DNS, etc.
+- File system commands
+    - File operations (create, read, write, delete)
+    - Directory operations (create, list, delete)
 
 ## Planned Features
 - Shell history, command chaining, and piping
@@ -70,11 +78,18 @@ pymini # Run the simulation
     - [x] View system information
     - [x] System monitoring
     - [ ] System logging
-- [ ] Basic networking
+- [x] Basic networking
     - [ ] Socket programming
     - [ ] Network protocols
     - [ ] Network security
+    - [ ] Network performance monitoring
 - [ ] Web scraping
     - [ ] Basic web scraping
     - [ ] Data extraction and parsing
     - [ ] Data storage and retrieval
+- [x] File system management
+    - [x] File operations (create, read, write, delete)
+    - [x] Directory operations (create, list, delete)
+    - [ ] File permissions and ownership
+    - [x] File system navigation
+    - [ ] File system monitoring

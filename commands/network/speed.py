@@ -1,4 +1,4 @@
-from core.wifi.diagnostics.signal import run_speed_test
+from core.net.signal import run_speed_test
 from utils.io import print_info, print_success, print_error, print_warning
 
 def cmd_speed(_args, _shell):

@@ -1,6 +1,6 @@
 import time
 import os
-from utils.io import print_heading, print_info, print_grey
+from utils.io import print_heading, print_info, print_grey, print_faint
 from core.system_stats import SystemStats
 
 def cmd_top(_args, shell):
@@ -23,7 +23,7 @@ def cmd_top(_args, shell):
                 time.sleep(1)
                 continue
             else:
-                print_grey("==========================")
+                print_faint("==========================")
                 print_info("PID\tName\t\tCPU\tMemory")
                 for proc in procs:
                     print_info(f"{proc['pid']}\t{proc['name']}\t{proc['cpu']}%\t{proc['memory']} MB")
@@ -31,4 +31,4 @@ def cmd_top(_args, shell):
             time.sleep(1)
             
     except KeyboardInterrupt:
-        print_grey("\nExiting pyMiniOS Monitor...")
+        print_faint("\nExiting pyMiniOS Monitor...")

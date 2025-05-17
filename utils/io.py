@@ -47,3 +47,9 @@ def print_grey(message):
     Prints a message in coral color.
     """
     print(color_text(message, Colors.GREY))  # Prints a message in coral color
+    
+def print_faint(message):
+    """
+    Prints a message in faint color.
+    """
+    print(color_text(message, Colors.FAINT))  # Prints a message in faint color
